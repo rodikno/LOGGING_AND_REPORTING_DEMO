@@ -1,13 +1,13 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import io.qameta.allure.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import page.objects.TheInternetMainPage;
+import page.objects.WebFormPage;
+
+import static io.qameta.allure.SeverityLevel.CRITICAL;
 
 public class TheInternetDemoTest {
 
@@ -21,15 +21,22 @@ public class TheInternetDemoTest {
 
 
     @Test
-    public void hoversTest() throws InterruptedException {
+    @Description("Enters a value into a text field and submits the form, verifies that the form was submitted successfully")
+    @Severity(CRITICAL)
+    @Owner("Rodion Baronov")
+    @Link(name = "Website", url = "https://www.selenium.dev/selenium/web/web-form.html")
+    @Issue("TI-123")
+    public void webFormTest() throws InterruptedException {
 
         //Opening the page
         driver.get("https://www.selenium.dev/selenium/web/web-form.html");
         driver.manage().window().fullscreen();
 
-        TheInternetMainPage page = new TheInternetMainPage(driver);
+        WebFormPage page = new WebFormPage(driver);
         page.getTextInput().sendKeys("Hello");
-        page.submitForm();
+        String submitionResult = page.submitFormAndReturnFinalMessage();
+
+        Assert.assertTrue(submitionResult.contains("Form submitted"));
     }
 
 
