@@ -63,11 +63,6 @@ public class TheInternetDemoTest {
         Assert.assertTrue(submitionResult.contains("Form submitted"));
     }
 
-//    @Attachment(value = "screenshot", type = "image/png", fileExtension = ".png")
-//    public byte[] attachScreenshotPNG() throws IOException {
-//        return Files.readAllBytes(Paths.get("/path/to/image.png"));
-//    }
-
 
     @AfterClass
     public void tearDown() {
