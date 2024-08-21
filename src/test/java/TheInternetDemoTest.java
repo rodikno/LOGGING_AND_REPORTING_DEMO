@@ -11,7 +11,6 @@ import page.objects.WebFormPage;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 
 import static io.qameta.allure.SeverityLevel.CRITICAL;
 
@@ -45,7 +44,7 @@ public class TheInternetDemoTest {
     @Owner("Rodion Baronov")
     @Link(name = "Website", url = "https://www.selenium.dev/selenium/web/web-form.html")
     @Issue("TI-123")
-    public void webFormTest(String text) throws InterruptedException, IOException {
+    public void webFormTest(String text) throws IOException {
         Allure.attachment("data.txt", "This is the file content");
 
         //Opening the page
@@ -64,10 +63,10 @@ public class TheInternetDemoTest {
         Assert.assertTrue(submitionResult.contains("Form submitted"));
     }
 
-    @Attachment(value = "screenshot", type = "image/png", fileExtension = ".png")
-    public byte[] attachScreenshotPNG() throws IOException {
-        return Files.readAllBytes(Paths.get("/path/to/image.png"));
-    }
+//    @Attachment(value = "screenshot", type = "image/png", fileExtension = ".png")
+//    public byte[] attachScreenshotPNG() throws IOException {
+//        return Files.readAllBytes(Paths.get("/path/to/image.png"));
+//    }
 
 
     @AfterClass

@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b65d948d-7870-4ea8-91ed-5dd7ae0b75a8" name="Changes" comment="Rename TheInternetMainPage to WebFormPage and add logging&#10;&#10;Renamed TheInternetMainPage to WebFormPage and enhanced functionality by adding a method to submit forms and retrieve the final message. Introduced log4j for logging capabilities, updated dependencies in pom.xml, and included appropriate configurations and tests.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestHelper.java" afterDir="false" />
+    <list default="true" id="b65d948d-7870-4ea8-91ed-5dd7ae0b75a8" name="Changes" comment="Ignore Allure-related files and update workspace for new tests&#10;&#10;Update `.gitignore` to exclude `.allure` directory. Modify `workspace.xml` to reflect renaming and additions like `WebFormPage` and logging features. Add a data provider to `TheInternetDemoTest` and integrate screenshot capturing and attachments for enhanced test reporting.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TheInternetDemoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TheInternetDemoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +77,7 @@
       <recent name="C:\_projects\LOGGING_AND_REPORTING\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TheInternetDemoTest.webFormTest">
+  <component name="RunManager" selected="TestNG.TheInternetDemoTest">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.App" />
       <module name="LOGGING_AND_REPORTING" />
@@ -127,9 +128,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TheInternetDemoTest.webFormTest" />
         <item itemvalue="TestNG.TheInternetDemoTest" />
         <item itemvalue="Application.App" />
+        <item itemvalue="TestNG.TheInternetDemoTest.webFormTest" />
         <item itemvalue="TestNG.TheInternetDemoTest.hoversTest" />
       </list>
     </recent_temporary>
@@ -167,13 +168,22 @@
       <option name="project" value="LOCAL" />
       <updated>1724157594990</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ignore Allure-related files and update workspace for new tests&#10;&#10;Update `.gitignore` to exclude `.allure` directory. Modify `workspace.xml` to reflect renaming and additions like `WebFormPage` and logging features. Add a data provider to `TheInternetDemoTest` and integrate screenshot capturing and attachments for enhanced test reporting.">
+      <option name="closed" value="true" />
+      <created>1724172512699</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1724172512699</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add initial Selenium test setup&#10;&#10;Implemented basic Selenium test with a sample main page object and a test case for form submission. Added necessary dependencies, project configuration files, and a .gitignore for common IDEs and build directories." />
     <MESSAGE value="Add missing newline after setup method&#10;&#10;The newline improves code readability and ensures consistent formatting. This change does not affect the functionality of the tests." />
     <MESSAGE value="Rename TheInternetMainPage to WebFormPage and add logging&#10;&#10;Renamed TheInternetMainPage to WebFormPage and enhanced functionality by adding a method to submit forms and retrieve the final message. Introduced log4j for logging capabilities, updated dependencies in pom.xml, and included appropriate configurations and tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename TheInternetMainPage to WebFormPage and add logging&#10;&#10;Renamed TheInternetMainPage to WebFormPage and enhanced functionality by adding a method to submit forms and retrieve the final message. Introduced log4j for logging capabilities, updated dependencies in pom.xml, and included appropriate configurations and tests." />
+    <MESSAGE value="Ignore Allure-related files and update workspace for new tests&#10;&#10;Update `.gitignore` to exclude `.allure` directory. Modify `workspace.xml` to reflect renaming and additions like `WebFormPage` and logging features. Add a data provider to `TheInternetDemoTest` and integrate screenshot capturing and attachments for enhanced test reporting." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ignore Allure-related files and update workspace for new tests&#10;&#10;Update `.gitignore` to exclude `.allure` directory. Modify `workspace.xml` to reflect renaming and additions like `WebFormPage` and logging features. Add a data provider to `TheInternetDemoTest` and integrate screenshot capturing and attachments for enhanced test reporting." />
   </component>
 </project>
