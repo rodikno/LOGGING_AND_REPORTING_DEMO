@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 
 public class TestHelper {
 
@@ -16,12 +17,14 @@ public class TestHelper {
                     .getScreenshotAs(OutputType.FILE);
 
             // specify the path where screenshots will be saved
-            // make sure the path already exists, if not - create the directory
             Path destination = Paths.get(".screenshots", screenshotName);
-            
-            //Copy the File object to the desired location for reporting
-            Files.copy(screenshot.toPath(), destination);
-            
+
+            // ensure the target directory exists
+            Files.createDirectories(destination.getParent());
+
+            // Copy the File object to the desired location for reporting (overwrite if exists)
+            Files.copy(screenshot.toPath(), destination, StandardCopyOption.REPLACE_EXISTING);
+
             return destination;
         } catch (IOException e) {
             throw new RuntimeException("Failed to save screenshot", e);
